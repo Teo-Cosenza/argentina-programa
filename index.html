@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Curriculum Vitae</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#profile">Información Personal</a></li>
+				<li><a href="#experience">Experiencia</a></li>
+				<li><a href="#skills">Habilidades</a></li>
+			</ul>
+		</nav>
+		<div class="hero">
+			<div class="foto">
+				<img src="/72.jpg" alt="Foto de perfil">
+			</div>
+			<h1>Juan Pérez</h1>
+			<h2>Desarrollador Web</h2>
+		</div>
+	</header>
+
+	<main>
+		<section id="profile">
+			<h2>Información Personal</h2>
+			<ul>
+				<li><strong>Nombre:</strong> Juan Pérez</li>
+				<li><strong>Edad:</strong> 28 años</li>
+				<li><strong>Email:</strong> juanperez@gmail.com</li>
+				<li><strong>Teléfono:</strong> +54 9 11 1234 5678</li>
+				<li><strong>Dirección:</strong> Av. Siempreviva 123, Springfield</li>
+			</ul>
+		</section>
+
+		<section id="experience">
+			<h2>Experiencia</h2>
+			<ul>
+				<li>
+					<h3>Desarrollador Web - ACME Inc.</h3>
+					<span class="fecha">2018 - Presente</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis quam ut elit elementum, in porttitor velit posuere. Proin a vestibulum ipsum. Aliquam erat volutpat. Sed consequat, libero eu venenatis porttitor, elit felis convallis elit, ac blandit eros leo sed sapien.</p>
+				</li>
+				<li>
+					<h3>Desarrollador Web - XYZ Corp.</h3>
+					<span class="fecha">2015 - 2018</span>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis quam ut elit elementum, in porttitor velit posuere. Proin a vestibulum ipsum. Aliquam erat volutpat. Sed consequat, libero eu venenatis porttitor, elit felis convallis elit, ac blandit eros leo sed sapien.</p>
+				</li>
+			</ul>
+		</section>
+
+		<section id="skills">
+			<h2>Habilidades</h2>
+			<ul>
+				<li>HTML5</li>
+				<li>CSS3</li>
+				<li>JavaScript</li>
+				<li>React</li>
+				<li>Node.js</li>
+            </ul>
+		</section>
+	</main>
+	<script>
+        // Selección de elementos del DOM
+        const nav = document.querySelector('nav');
+        const hero = document.querySelector('.hero');
+        const foto = document.querySelector('.foto img');
+        const infoPersonal = document.querySelector('#profile ul');
+        const experiencia = document.querySelector('#experience ul');
+        const habilidades = document.querySelector('#skills ul');
+      
+        // Animación de la barra de navegación al hacer scroll
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 50) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        });
+      
+        // Animación de entrada del header
+        setTimeout(function() {
+          hero.classList.add('fade-in');
+        }, 1000);
+      
+        // Animación de entrada de la foto de perfil
+        setTimeout(function() {
+          foto.classList.add('slide-right');
+        }, 1500);
+      
+        // Animación de entrada de la información personal
+        setTimeout(function() {
+          infoPersonal.classList.add('fade-in');
+        }, 2000);
+      
+        // Animación de entrada de la experiencia laboral
+        setTimeout(function() {
+          experiencia.classList.add('fade-in');
+        }, 2500);
+      
+        // Animación de entrada de las habilidades
+        setTimeout(function() {
+          habilidades.classList.add('fade-in');
+        }, 3000);
+      </script>
+      
+</body>
+</html>
